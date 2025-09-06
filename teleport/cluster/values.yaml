@@ -1,4 +1,4 @@
-clusterName: test-cluster.ch
+clusterName: localhost
 # proxyListenerMode: multiplex
 # acme: false
 # authentication:

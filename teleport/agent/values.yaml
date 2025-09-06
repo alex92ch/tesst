@@ -1,0 +1,14 @@
+roles: kube,app,discovery
+proxyAddr: "teleport.test-cluster.ch:443"
+kubeClusterName: "test-cluster"
+joinParams:
+  method: "kubernetes"
+  tokenName: "kubernetes-token"
+joinTokenSecret:
+  create: false
+  name: "join-token-secret"
+apps:
+# ArgoCD
+- name: argocd
+  uri: http://argocd-server.argocd.svc.cluster.local
+  public_addr: argocd-server-http-argocd-test-cluster.teleport.test-cluster.ch

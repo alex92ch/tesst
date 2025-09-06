@@ -1,0 +1,21 @@
+clusterName: test-cluster.ch
+# proxyListenerMode: multiplex
+# acme: false
+# authentication:
+#   type: saml
+#   connectorName: "entra"
+#   localAuth: true
+enterprise: false
+# licenseSecretName: "teleport-license"
+# chartMode: aws
+operator:
+  enabled: true
+  joinMethod: "kubernetes"
+  token: "teleport-operator"
+  nameOverride: operator
+# persistence:
+#   storageClassName: "efs-teleport"
+service:
+  type: ClusterIP
+ingress:
+  enabled: false

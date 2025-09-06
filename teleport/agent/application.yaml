@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: teleport-agent
+  namespace: argocd
+spec:
+  project: test-cluster
+  source:
+    repoURL: "https://github.com/alex92ch/tesst.git"
+    targetRevision: "main"
+    path: "./teleport/agent"
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: teleport-agent
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true

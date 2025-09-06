@@ -16,6 +16,6 @@ operator:
 # persistence:
 #   storageClassName: "efs-teleport"
 service:
-  type: ClusterIP
+  type: LoadBalancer
 ingress:
   enabled: false

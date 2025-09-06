@@ -1,5 +1,5 @@
 roles: kube,app,discovery
-proxyAddr: "teleport.localhost:443"
+proxyAddr: "teleport-proxy.teleport-cluster.svc.cluster.local:443"
 kubeClusterName: "test-cluster"
 joinParams:
   method: "kubernetes"

@@ -15,7 +15,5 @@ operator:
   nameOverride: operator
 # persistence:
 #   storageClassName: "efs-teleport"
-service:
-  type: ClusterIP
 ingress:
   enabled: false

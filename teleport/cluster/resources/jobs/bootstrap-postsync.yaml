@@ -30,6 +30,7 @@ spec:
               storage:
                 type: memory
               proxy_server: teleport-cluster.teleport-cluster.svc.cluster.local:443
+              insecure_skip_verify: true
               outputs:
               - type: identity
                 destination:

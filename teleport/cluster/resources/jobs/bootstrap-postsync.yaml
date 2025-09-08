@@ -63,7 +63,7 @@ spec:
                 sleep 2
               done
               echo "Running tctl..."
-              tctl --auth-server teleport-cluster.teleport-cluster.svc.cluster.local:443 -i /opt/machine-id/identity create -f roles/*.yaml
+              tctl --auth-server localhost -i /opt/machine-id/identity create -f roles/*.yaml
           volumeMounts:
             - mountPath: /opt/machine-id
               name: machine-id

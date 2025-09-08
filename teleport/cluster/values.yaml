@@ -17,3 +17,5 @@ operator:
 #   storageClassName: "efs-teleport"
 ingress:
   enabled: false
+service:
+  type: ClusterIP

@@ -1,0 +1,24 @@
+apiVersion: resources.teleport.dev/v2
+kind: TeleportSAMLConnector
+metadata:
+  name: entra-id
+  namespace: teleport-cluster
+spec:
+  display: FCP SSO
+  acs: https://teleport.cr1.fnva.ch:443/v1/webapi/saml/acs/entra-id
+  allow_idp_initiated: true
+  entity_descriptor_url: https://login.microsoftonline.com/1dfa8e5b-22fc-4be8-a47c-ca3d5997b75a/federationmetadata/2007-06/federationmetadata.xml?appid=a20114fc-1874-4e2a-8224-2049d208fd40
+  attributes_to_roles:
+  - name: groups
+    value: bcd26206-3a04-4d5c-968b-9c6f96e89812
+    roles:
+    - access
+    - reviewer
+  - name: groups
+    value: 6b83161b-d532-4367-93ef-58df681dd051
+    roles:
+    - requester
+  - name: groups
+    value: 1755c3b5-0d84-447d-b8f1-7dd53586f2fb
+    roles:
+    - admin

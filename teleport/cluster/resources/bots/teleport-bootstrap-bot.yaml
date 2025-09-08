@@ -1,0 +1,9 @@
+apiVersion: resources.teleport.dev/v1
+kind: TeleportBotV1
+metadata:
+  name: bootstrap
+  namespace: teleport-cluster
+spec:
+  roles:
+  - bootstrap
+  max_session_ttl: 28800s

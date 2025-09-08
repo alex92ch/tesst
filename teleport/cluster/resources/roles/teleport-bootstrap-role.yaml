@@ -1,0 +1,13 @@
+apiVersion: resources.teleport.dev/v1
+kind: TeleportRoleV8
+metadata:
+  name: bootstrap
+  namespace: teleport-cluster
+spec:
+  allow:
+    rules:
+    - resources: [plugin]
+      verbs: [list, create, read, update, delete]
+    - resources: [saml_idp_service_provider]
+      verbs: [list, create, read, update, delete]
+  deny: {}

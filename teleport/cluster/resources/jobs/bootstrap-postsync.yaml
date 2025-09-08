@@ -29,7 +29,7 @@ spec:
                 token: bootstrap
               storage:
                 type: memory
-              proxy_server: localhost
+              proxy_server: teleport-cluster.teleport-cluster.svc.cluster.local:3080
               outputs:
               - type: identity
                 destination:
